@@ -1,0 +1,30 @@
+#encabezado 
+{
+	background-color: #1ABC9C; 
+	height:50px;
+}
+#todo
+{
+	background-color: #F0F3F4;
+}
+.container{
+	background-color: #ffffff;
+	height: 100%;
+}
+#line{
+	font-size: 60px;
+}
+#ayuda
+{
+	width: 100%;
+}
+#ayuda:hover
+{
+	width: 110%;
+}
+#resultado_busqueda
+{
+	background-color: #ffffff;
+	height: 300px;
+	border-radius: 3px;
+}
