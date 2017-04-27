@@ -78,7 +78,7 @@
 			if( verificar_existencia_tabla( $tmp_nombre_objeto_o_tabla, $_GET[ 'servidor' ], $_GET[ 'usuario' ], $_GET[ 'contrasena' ], $_GET[ 'bd' ], $imprimir_mensajes_prueba ) == 1 )
 			{
 				$cadena_informe_instalacion .= "<br>La tabla $tmp_nombre_objeto_o_tabla se ha creado con éxito.";	
-				$resultado = $conexion->query ($sql_ayuda);
+				$resultado = $conexion->query (utf8_encode($sql_ayuda));
 			}else{
 					$cadena_informe_instalacion .= "<br>Error: La tabla $tmp_nombre_objeto_o_tabla no se ha creado. ".$mensaje1;	
 					$interrupcion_proceso = 1;
