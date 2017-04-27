@@ -1,7 +1,14 @@
+<!-- 
+
+	Autor : Edwar Cruz 
+	Esta es la página del manúal técnico, el cual es la ayuda.
+	
+ -->
 <?php 
-include 'Operaciones.php';
- header("Content-Type: text/html; charset=UTF-8");
-$mi_obj = New Operaciones; ?>
+	include 'Operaciones.php';
+	 header("Content-Type: text/html; charset=UTF-8");
+	$mi_obj = New Operaciones; 
+?>
 <!DOCTYPE html>
 <html ng-app="App">
 <head>
@@ -15,7 +22,8 @@ $mi_obj = New Operaciones; ?>
 </head>
 <body id="todo">
 	<div class="container" >
-	<header >
+		<!-- Este es el encabezado de mi archivo -->
+		<header >
 			<div class="row">
 				<div class="col-xs-12 col-md-3"></div>
 				<div class="col-xs-12 col-md-2">
@@ -35,12 +43,14 @@ $mi_obj = New Operaciones; ?>
 			</div>
 			<div id="encabezado"></div>
 		</header>
+		<!-- Fin del encabezao -->
 
+		<!-- Cuerpo que contiene el controlador de angular -->
 		<div class="row">
 			
-			<div ng-controller="App-Ctrl">
+
+			<div ng-controller="App-Ctrl"><!-- Controlador del angular -->
 				<div class="col-xs-12 col-md-4">
-					
 					<main class="well">	
 						<center><h2><ol><b>Buscar</b></ol></h2></center>
 						<div class="input-group">
@@ -49,35 +59,33 @@ $mi_obj = New Operaciones; ?>
 						</div>
 						<br>
 						<div class="row">
-						<div class="col-xs-12 col-md-12" id="resultado_busqueda" >
-						<div ng-repeat="x in campos">
-							<span ng-click="mostrar_imagen();">
-								<li style="color: blue"  >{{ x.Nombre }} </li>
-								{{ x.Texto}}
-							</span>
-						</div>	
-						</div>
-							
+							<div class="col-xs-12 col-md-12" id="resultado_busqueda" >
+								<div ng-repeat="x in campos">
+									<span ng-click="mostrar_imagen();">
+										<li style="color: blue"  >{{ x.Nombre }} </li>
+										{{ x.Texto}}
+									</span>
+								</div>	
+							</div>
 						</div>
 					</main>	
 				</div>
 
-					<div class="col-xs-12 col-md-8">	
-						<div class="row well"></div>
+				<div class="col-xs-12 col-md-8">	
+					<div class="row well"></div>
 
-						<aside>
+					<aside>
+						<div ng-repeat="x in campos">
+							<li style="color: blue"> {{x.Nombre}} </li>
+							<img id={{x.Id}} width="100%" src={{x.Img}}>
+						</div> 
+					</aside>	
 
-							<div ng-repeat="x in campos">
-								<li style="color: blue"> {{x.Nombre}} </li>
-								<img id={{x.Id}} width="100%" src={{x.Img}}>
-							</div>
-							 
-						</aside>	
+				</div>
 
-					</div>
-				</div>	
+			</div>	
 
-			</div>
+		</div>
 
 
 	</div>

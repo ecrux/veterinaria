@@ -1,4 +1,10 @@
 <?php 
+/**
+	Autor : Edwar Cruz 
+	Este archivo, es el contenido sql de las diferentes tablas que se crean en el momento de la instalación.
+*/
+
+
 
 $sql_ayuda = "INSERT INTO `tb_ayuda` (`id_ayuda`, `ayuda`, `texto`, `url`, `palabras_claves`) VALUES
 (1, 'Casos de uso', 'Un caso de uso es una descripción de los pasos o las actividades que deberán realizarse para llevar a cabo algún proceso.', 'img/caso.png', 'uml, manual técnico, ayudas'),

@@ -5,5 +5,5 @@
 	$servidor = "localhost";
     $usuario = "root";
     $password = "";
-    $bd = "bd_install_vet";
+    $bd = "bd_pru_vet";
 ?>
